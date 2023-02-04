@@ -1,0 +1,50 @@
+.wrapper{
+  width: 100%;
+  display: flex;
+  margin: 15px 0;
+  justify-content: center;
+}
+.main{
+}
+.header{
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.location{
+  display: flex;
+  align-items: center;
+}
+.contact{
+  display: flex;
+  align-items: center;
+}
+.detail{
+  margin: 20px 0
+}
+.detail-title{
+  font-weight: bold;
+}
+
+.btnDatSan{
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 15px;
+  background-color: var(--color-default);
+  color: #fff;
+  border-radius:20px;
+  margin: 15px 0;
+
+  &:hover{
+    background-color: rgb(100, 101, 188)
+  }
+}
+

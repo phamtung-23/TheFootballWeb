@@ -1,0 +1,29 @@
+.wrapper {
+  background-color: #3b3b3b;
+  height: 300px;
+
+}
+
+.icon-contact{
+  display: flex;
+  justify-content: center;
+}
+.icon{
+  font-size: 30px;
+  color: aliceblue;
+  margin: 20px;
+  margin-top: 50px;
+}
+.title-contact{
+  width: 100%;
+  color: aliceblue;
+  text-align: center;
+  font-weight: bold;
+  font-size:25px
+}
+.skill{
+  text-align: center;
+  color: aliceblue;
+  font-size:15px;
+  font-family: 'Courier New';
+}

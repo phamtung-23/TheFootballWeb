@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --color-default: hsl(217, 86%, 20%);
+  
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size:62.5%;
+}
+
+body{
+  font-size:1.6rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+}

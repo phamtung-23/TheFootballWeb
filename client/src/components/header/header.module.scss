@@ -1,0 +1,103 @@
+.wrapper{
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background-color: #fff;
+  border-bottom: 1px solid #e8ebed;
+  font-size: 1.4rem;
+  left: 0;
+  padding: 0 28px;
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+.logo{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.img{
+  border-radius: 8px;
+  flex-shrink: 0;
+  height: 38px;
+  object-fit: contain;
+  width: 38px;
+}
+
+.title{
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-left: 16px;
+}
+
+
+.search{
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius:20px;
+}
+.body{
+  display: flex;
+}
+.icon-search{
+  background-color: #fff;
+  background-image: url('https://fullstack.edu.vn/static/media/search.9bd3926522ea0937310c.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  border-radius: 50%;
+  height: 32px;
+  opacity: .7;
+  transition: opacity .2s ease-in-out;
+  width: 30px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.input{
+  border: none;
+  height: 100%;
+  margin-right: 10px;
+  flex: 1;
+  caret-color: #444;
+  height: 100%;
+  outline: none;
+  padding: 0 4px;
+}
+
+.action{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.bell{
+  background-color: #fff;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  border-radius: 50%;
+  height: 32px;
+  opacity: .7;
+  transition: opacity .2s ease-in-out;
+  width: 30px;
+  margin: 8px;
+}
+
+.account{
+  background-color: #fff;
+  background-position: 50%;
+  background-size: 18px;
+  border-radius: 50%;
+  height: 30px;
+  opacity: .7;
+  transition: opacity .2s ease-in-out;
+  width: 30px;
+  margin: 0 8px;
+}

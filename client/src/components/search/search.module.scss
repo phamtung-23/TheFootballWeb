@@ -1,0 +1,50 @@
+// form điềm  thông tin tìm kiếm
+.search-main{
+  width: 100%;
+  padding:10px;
+
+}
+.title-main{
+  display: flex;
+  color: var(--color-default);
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Courier New';
+}
+
+.item-search{
+  display: flex;
+  flex-direction: column;
+}
+.item-search-checkbox{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  
+  .input-box-checkbox{
+    width: 50px;
+  }
+}
+.title{
+  font-size: 20px;
+  font-family: 'Courier New';
+  font-weight: bold;
+}
+
+.input-box{
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 10px;
+}
+.btnSearch{
+  width: 200px;
+  font-family: 'Courier New';
+  color: aliceblue;
+  height: 40px;
+  background-color: var(--color-default);
+  border-radius: 10px;
+  margin: 15px auto;
+
+}

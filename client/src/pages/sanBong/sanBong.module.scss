@@ -1,0 +1,85 @@
+.wrapper{
+  width: 100%;
+}
+.search-form{
+}
+// dánh sách tìm kiếm
+.search-lists{
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper-list{
+  width: 80%;
+  border: 2px solid #e8e8e8;
+  border-radius: 16px;
+  margin: 10px 0;
+  padding: 15px;
+}
+.header{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  height: 50px;
+}
+.author{
+  width: 100%;
+  display: flex;
+  justify-content:start;
+  align-items: center;
+
+}
+.img{
+  border-radius: 50%;
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.name-author{
+  color: #292929;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.body{
+  display: flex;
+}
+.info{
+  width: 70%;
+  padding: 10px 0;
+}
+
+.img-content{
+  width: 30%;
+  padding: 0 10px;
+
+  img{
+    border-radius: 20px;
+  }
+}
+.title-body{
+  font-size:25px;
+  font-weight: 600;
+}
+.content-body{
+  font-size:15px;
+  font-weight: 200;
+}
+.time-body{
+  margin-top:20px;
+  font-size: 20;
+  font-weight: 400;
+}
+.location-body{
+  margin-top:10px;
+  font-size:15px;
+  font-weight: bold;
+}
+.title-list{
+  color: var(--color-default);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Courier New';
+}
