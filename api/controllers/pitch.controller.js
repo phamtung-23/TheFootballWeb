@@ -38,9 +38,23 @@ export const getPitchByID = async(req, res, next) => {
 }
 // GET ALL
 export const getAllPitch = async(req, res, next) => {
+  const {min, max, name, address} = req.query
 
   try {
-    const pitchAll = await Pitch.find()
+    let pitchAll
+    if(name!==''){
+      if(address!==''){
+        pitchAll = await Pitch.find({name, address, price:{$gt: min || 1, $lt: max || 1000000}})
+      }else{
+        pitchAll = await Pitch.find({name, price:{$gt: min || 1, $lt: max || 1000000}})
+      }
+    }else{
+      if(address!==''){
+        pitchAll = await Pitch.find({address, price:{$gt: min || 1, $lt: max || 1000000}})
+      }else{
+        pitchAll = await Pitch.find({price:{$gt: min || 1, $lt: max || 1000000}})
+      }
+    }
     res.status(200).json(pitchAll)
   } catch (error) {
     next(error)

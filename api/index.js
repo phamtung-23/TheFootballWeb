@@ -11,11 +11,10 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
-
+mongoose.set("strictQuery", false);
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO)
-    console.log("Connected to MongoDB!!!")
   } catch (err) {
     throw err;
   }
@@ -26,7 +25,7 @@ mongoose.connection.on('disconnected', ()=>{
 })
 
 mongoose.connection.on('connected', ()=>{
-  console.log("MongoDb connected!")
+  console.log("MongoDB connected!")
 })
 
 //
@@ -51,5 +50,4 @@ app.use((err, req, res, next)=>{
 
 app.listen(8080,()=>{
   connect()
-  console.log('Connected to backend!!!')
 })
