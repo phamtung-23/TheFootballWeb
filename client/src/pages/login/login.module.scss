@@ -1,0 +1,80 @@
+.wrapper{
+  width: 100%;
+ 
+
+//  display: flex;
+}
+
+
+.username{
+  width: 100%;
+  border:1px solid #e2e2e2;
+  border-radius:5px;
+  margin:10px 0;
+  padding:10px;
+}
+.password{
+  width: 100%;
+  border:1px solid #e2e2e2;
+  border-radius:5px;
+  margin:10px 0;
+  padding:10px;
+
+
+}
+.wrapper-btn{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:10px 0;
+}
+.btnLogin{
+  background-color: var(--color-default);
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius:3px;
+  &:hover{
+    background-color: #2272e2;
+  }
+}
+.forgot-pass{
+  font-size:14px;
+  text-decoration: underline;
+  margin: 5px;
+  cursor: pointer;
+
+}
+.register{
+  margin: 10px 5px;
+  display: flex;
+  justify-content: center;
+}
+.content{
+  font-size: 14px;
+}
+.link{
+  padding-left: 5px;
+  font-size:15px;
+  color: #006aff;
+  cursor: pointer;
+}
+.title-login{
+  width: 100%;
+  text-align: center;
+  font-size:30px;
+  font-family: 'Courier New';
+  font-weight: bold;
+}
+.wrapper-img{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.img-title{
+  border-radius: 50%;
+}
+.message-err{
+  color: #ff0000
+}

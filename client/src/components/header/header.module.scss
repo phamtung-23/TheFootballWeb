@@ -10,7 +10,7 @@
   position: sticky;
   right: 0;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 .logo{
   flex: 1;
@@ -90,7 +90,7 @@
   margin: 8px;
 }
 
-.account{
+.icon-user{
   background-color: #fff;
   background-position: 50%;
   background-size: 18px;
@@ -100,4 +100,61 @@
   transition: opacity .2s ease-in-out;
   width: 30px;
   margin: 0 8px;
+}
+.user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name-user{
+  font-size:18px;
+  font-weight:bold;
+  cursor: pointer;
+}
+.sub-menu-wrapper{
+  position: absolute;
+  width: 250px;
+  top:100%;
+  right:1%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  
+}
+.open-menu{
+  max-height: 400px;
+}
+.sub-menu{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  margin:5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  hr{
+    width: 100%;
+    color: #000000;
+    margin: 10px 5px;
+    
+  }
+}
+.user-info{
+  display: flex;
+  align-items: center;
+}
+
+.sub-menu-list-item{
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s, filter 0.5s ease-in-out;
+  &:hover {
+    font-weight:600;
+    transform: scale(1.078);
+  }
+}
+.sub-menu-item-icon{
+  font-size:25px;
+  margin: 5px;
+}
+.sub-menu-item-text{
+  padding: 5px;
 }

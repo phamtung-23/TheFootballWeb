@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const cx = classNames.bind(styles)
 function TeamList(){
 
-  const {data, loading, error, reFetch} = useFetch("/teams")
+  const {data, loading, error, reFetch} = useFetch(`/teams?name=&address=&check=${false}`)
   return (
     
       <div>
@@ -23,7 +23,9 @@ function TeamList(){
               <FontAwesomeIcon className={cx('span-heading')} icon={faRankingStar}/>
             </div>
           </div>
-          <div className={cx('extra-info')}>Xem tất cả</div>
+          <Link to='/teams'>
+            <div className={cx('extra-info')}>Xem tất cả</div>
+          </Link>
         </div>
         <div className={cx('lists-item',"grid grid-cols-1 gap-4 sm:grid-cols-4")}>
           {loading?"Loading...":(

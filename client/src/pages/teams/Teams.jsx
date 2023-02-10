@@ -1,54 +1,51 @@
 import Search from '../../components/search/Search';
 import styles from './teams.module.scss'
 import classNames from 'classnames/bind';
-import {BsThreeDots} from 'react-icons/bs'
+import {BsCheckLg, BsThreeDots} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
+import {BiSearchAlt} from 'react-icons/bi'
+import { useState } from 'react';
+
 
 const cx = classNames.bind(styles)
 
 function Teams() {
-  const {data, loading, error, reFetch} = useFetch("/teams")
-  const teams = [
-    {
-      name:'Paris Saint-Germain F.C.',
-      imgUrl:'https://i.pinimg.com/564x/6f/a7/73/6fa773a0cfd8e5e639dd1c334033281f.jpg',
-    },
-    {
-      name:'Real Madrid FC',
-      imgUrl:'https://i.pinimg.com/564x/5b/81/19/5b8119f252cd1182cf85fe72453b9201.jpg',
-    },
-    {
-      name:'Barcelona FC',
-      imgUrl:'https://i.pinimg.com/564x/4d/24/a5/4d24a5ada8743e86eb075342adc7c000.jpg',
-    },
-    {
-      name:'Manchester United FC',
-      imgUrl:'https://i.pinimg.com/564x/b9/30/84/b93084c355e7a5b0ea8b69316ae82757.jpg',
-    },
-    {
-      name:'Liverpool FC',
-      imgUrl:'https://i.pinimg.com/564x/b0/33/c1/b033c1e388efef133716a5364a056ed9.jpg',
-    },
-    {
-      name:'Manchester City FC',
-      imgUrl:'https://i.pinimg.com/564x/09/22/a4/0922a4f6f8f86900f05a99ed29fd6f86.jpg',
-    },
-    {
-      name:'Aletico madrid FC',
-      imgUrl:'https://i.pinimg.com/564x/e6/e3/ef/e6e3ef11313f0b8df3a2dec703a7d7de.jpg',
-    },
-    {
-      name:'Arsenal FC',
-      imgUrl:'https://i.pinimg.com/564x/88/ec/fc/88ecfcc17e91b01b3e393060b6c4a0ad.jpg',
-    },
-    
-    
-  ]
+  const [nameTeam, setNameTeam] = useState('')
+  const [addressTeam, setAddressTeam] = useState('')
+  const [isRecruit, setIsRecruit] = useState(false)
+  const [isFullMember, setIsFullMember] = useState(false)
+
+  const {data, loading, error, reFetch} = useFetch(`/teams?name=${nameTeam}&address=${addressTeam}&recruit=${isRecruit}&member=${isFullMember}`)
+
+  const handleClick = () => {
+    reFetch()
+  }
+
   return (
     <div className={cx('wrapper','block sm:flex w-full ')}>
       <div className={cx('search-teams',' w-full sm:w-1/4')}>
-        <Search type={'teams'}/>
+        {/* <Search type={'teams'}/> */}
+        <div className={cx('search-main')}>
+          <span className={cx('title-main')}>Tìm Đội</span>
+          <div className={cx('item-search')}>
+            <label className={cx('title')}>Tên đội bóng</label>
+            <input className={cx('input-box')} type="text" onChange={e=>{setNameTeam(e.target.value)}} placeholder="Nhập tên đội bóng..."/>
+          </div>
+          <div className={cx('item-search-checkbox')}>
+            <label className={cx('title')}>Đang tuyển</label>
+            <input className={cx('input-box-checkbox')} onChange={e=>{setIsRecruit(e.target.checked)}} type="checkbox" />
+          </div>
+          <div className={cx('item-search-checkbox')}>
+            <label className={cx('title')}>Đã đủ thành viên</label>
+            <input className={cx('input-box-checkbox')} onChange={e=>{setIsFullMember(e.target.checked)}} type="checkbox" />
+          </div>
+          <div className={cx('item-search')}>
+            <label className={cx('title')}>Địa điểm</label>
+            <input className={cx('input-box')} type="text" onChange={e=>{setAddressTeam(e.target.value)}} placeholder="Nhập địa điểm..."/>
+          </div>
+          <button className={cx('btnSearch',"flex")} onClick={handleClick}><BiSearchAlt/>  Tìm Kiếm</button>
+        </div>
       </div>
       <div className={cx('content','w-full p-4 sm:w-3/4')}>
         <h2 className={cx('title-main-list')}>Danh sách Đội bóng</h2>

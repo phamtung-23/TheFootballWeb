@@ -1,0 +1,60 @@
+.wrapper{
+  width: 100%;
+ 
+
+//  display: flex;
+}
+.arrow-back{
+  position: absolute;
+  top:20px;
+  left: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s, filter 0.5s ease-in-out;
+  &:hover {
+    font-weight:600;
+    transform: scale(1.078);
+  }
+}
+
+
+.email{
+  width: 100%;
+  border:1px solid #e2e2e2;
+  border-radius:5px;
+  margin:10px 0;
+  padding:10px;
+}
+.wrapper-btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:10px 0;
+}
+.btnLogin{
+  background-color: var(--color-default);
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius:3px;
+  &:hover{
+    background-color: #2272e2;
+  }
+}
+.title-login{
+  width: 100%;
+  text-align: center;
+  font-size:30px;
+  font-family: 'Courier New';
+  font-weight: bold;
+}
+.wrapper-img{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.img-title{
+  border-radius: 50%;
+}

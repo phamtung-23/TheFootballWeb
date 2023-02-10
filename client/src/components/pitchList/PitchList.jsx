@@ -4,13 +4,13 @@ import useFetch from '../../hooks/useFetch'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {AiOutlineLike,AiOutlineDislike} from 'react-icons/ai'
 import { faCrown} from '@fortawesome/free-solid-svg-icons';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 const cx = classNames.bind(styles)
 function PitchList(){
-
-  const {data, loading, error, reFetch} = useFetch("pitch/")
+  
+  const {data, loading, error, reFetch} = useFetch(`/pitch?name=&address=&min=${0}&max=${1000000}`)
 
   return (
     
@@ -22,7 +22,9 @@ function PitchList(){
               <FontAwesomeIcon className={cx('span-heading')} icon={faCrown}/>
             </div>
           </div>
-          <div className={cx('extra-info')}>Xem tất cả</div>
+          <Link to='/pitch'>
+            <div className={cx('extra-info')}>Xem tất cả</div>
+          </Link>
         </div>
         <div className={cx('lists-item',"grid grid-cols-1 gap-4 sm:grid-cols-4")}>
           

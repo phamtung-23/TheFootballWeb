@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100%;
+}
+
+.login-form {
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  background-image: url("https://cdn.wallpapersafari.com/59/76/FryXDf.jpg");
+  background-size: 100% 100%;
+}

@@ -1,0 +1,164 @@
+.wrapper {
+  width: 100%;
+}
+
+.search-lists {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper-list {
+  width: 80%;
+  border: 2px solid #e8e8e8;
+  border-radius: 16px;
+  margin: 10px 0;
+  padding: 15px;
+  transition: transform 0.5s, filter 0.5s ease-in-out;
+  transform-origin: center center;
+}
+.wrapper-list:hover {
+  transform: scale(1.05);
+  z-index: 200;
+}
+
+.header {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  height: 50px;
+}
+
+.author {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img {
+  border-radius: 50%;
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.name-author {
+  color: #292929;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.body {
+  display: flex;
+}
+
+.info {
+  width: 70%;
+  padding: 10px 0;
+}
+
+.img-content {
+  width: 60%;
+  padding: 0 10px;
+  transition: transform 0.5s, filter 0.5s ease-in-out;
+  transform-origin: center center;
+}
+.img-content:hover {
+  transform: scale(1.05);
+  z-index: 200;
+}
+.img-content img {
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+}
+
+.title-body {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.content-body {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.time-body {
+  margin-top: 20px;
+  font-size: 20;
+  font-weight: 400;
+}
+
+.location-body {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.title-list {
+  color: var(--color-default);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Courier New";
+}
+
+.search-main {
+  width: 100%;
+  padding: 10px;
+  position: sticky;
+  top: 15px;
+}
+
+.title-main {
+  display: flex;
+  color: var(--color-default);
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Courier New";
+}
+
+.item-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-search-checkbox {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.item-search-checkbox .input-box-checkbox {
+  width: 50px;
+}
+
+.title {
+  font-size: 20px;
+  font-family: "Courier New";
+  font-weight: bold;
+}
+
+.input-box {
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btnSearch {
+  width: 200px;
+  font-family: "Courier New";
+  color: aliceblue;
+  height: 40px;
+  background-color: var(--color-default);
+  border-radius: 10px;
+  margin: 15px auto;
+  justify-content: center;
+  align-items: center;
+}
+.btnSearch:hover {
+  background-color: #205b9a;
+}

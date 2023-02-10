@@ -35,7 +35,7 @@ function Home() {
     <>
       <div className={cx('wrapper')}>
         <div className={cx('slide-show')}>
-          <Slide>
+          <Slide className={cx('slide-main')}>
             {slideImages.map((slideImage, index)=> (
                 <div className={cx("each-slide")} key={index}>
                   <img key={index} className={cx("img",'h-100 w-max sm:w-3/4')} src={slideImage.url}/>
